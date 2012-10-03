@@ -23,14 +23,14 @@ public class ExamplesInSelenium {
 
 	@Test
 	public void registerNewUser() {
-		homePageHandle.registerNewUser("nishant verma", "nishu", "nishuverma@gmail.com",
+		homePageHandle.registerNewUser("User Name", "User Nick Name", "User_Email_Id@blah-blah.com",
 				"test@12345");
 	}
 	
 	
 	@Test
 	public void loginAsRegisteredUser(){
-		homePageHandle.loginAsRegisteredUser("nishuverma@gmail.com", "qwerty12345");
+		homePageHandle.loginAsRegisteredUser("User_Email_Id@blah-blah.com", "qwerty12345");
 		createOrgHandle.createOrg("TestOrg 12345");
 	}
 	
