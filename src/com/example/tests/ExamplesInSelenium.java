@@ -30,7 +30,7 @@ public class ExamplesInSelenium {
 	
 	@Test
 	public void loginAsRegisteredUser(){
-		homePageHandle.loginAsRegisteredUser("nishuverma@gmail.com", "yahoo@1980");
+		homePageHandle.loginAsRegisteredUser("nishuverma@gmail.com", "qwerty12345");
 		createOrgHandle.createOrg("TestOrg 12345");
 	}
 	
