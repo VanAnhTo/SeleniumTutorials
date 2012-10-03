@@ -19,15 +19,28 @@ public class HomePage {
 
 	@FindBy(id = "user-password")
 	private WebElement passwordBox;
+	
+	@FindBy(id = "session-email")
+	private WebElement sessionEmail;
+	
+	@FindBy(id = "session-email")
+	private WebElement sessionPassword;
 
-	public void RegisterAUser(String fullname, String nickname, String emailId,
+	public void registerNewUser(String fullname, String nickname, String emailId,
 			String password) {
 		loginRegisterLink.click();
 		fullnameBox.sendKeys(fullname);
 		nicknameBox.sendKeys(nickname);
 		emailBox.sendKeys(emailId);
 		passwordBox.sendKeys(password);
-		// passwordBox.submit();
+		passwordBox.submit();
+	}
+	
+	public void loginAsRegisteredUser(String emailId, String passwd){
+		loginRegisterLink.click();
+		sessionEmail.sendKeys(emailId);
+		sessionPassword.sendKeys(passwd);
+		sessionPassword.submit();
 	}
 
 }
