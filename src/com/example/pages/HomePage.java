@@ -23,7 +23,7 @@ public class HomePage {
 	@FindBy(id = "session-email")
 	private WebElement sessionEmail;
 	
-	@FindBy(id = "session-email")
+	@FindBy(id = "session-password")
 	private WebElement sessionPassword;
 
 	public void registerNewUser(String fullname, String nickname, String emailId,
